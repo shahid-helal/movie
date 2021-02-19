@@ -1,0 +1,55 @@
+.movies-library {
+    .movies-letter {
+        margin-bottom: 15px;
+        ul {
+            li {
+                display: inline-block;
+                a {
+                    display: block;
+                    text-decoration: none;
+                    background-color: $primary-color;
+                    color: $bg-primary;
+                    padding: 5px 12px;
+                    font-size: 16px;
+                    border-radius: 3px;
+                    font-weight: 600;
+                    min-width: 36px;
+                    text-align: center;
+                    margin: 5px 5px 5px 0;
+                }
+            }
+        }
+    }
+    .movies-table {
+        table {
+            thead {
+                tr {
+                    background-color: rgba(255,255,255,0.05);  
+                }
+            }
+            tr {
+                background-color: rgba(255,255,255,0.09);
+                td {
+                    border: 0;
+                    color: $text-primary;
+                    font-weight: 300;
+                    font-size: 14px;
+                    vertical-align: middle;
+                    &.thumb {
+                        width: 40px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $text-primary;
+                    }
+                    &:nth-child(1) {
+                        text-align: center;
+                    }
+                }
+                &:nth-child(even) {
+                    background-color: rgba(255,255,255,0.05);
+                }
+            }
+        }
+    }
+}

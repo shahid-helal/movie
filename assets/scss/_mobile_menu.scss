@@ -1,0 +1,41 @@
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: -290px;
+    height: 100%;
+    z-index: 9;
+    width: 280px;
+    padding-top: 100px;
+    background-color: $bg-primary;
+    overflow-y: scroll;
+    transition: 0.3s;
+    ul{
+        li {
+            a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-weight: 300;
+                font-size: 14px;
+                text-transform: uppercase;
+                padding: 10px 15px;
+                &:hover {
+                    background-color: rgba(255,255,255,0.09);
+                }
+            }
+            .mega-menu {
+                margin: 0;
+                .col-4 {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+                a.link {
+                    padding: 4px 15px;
+                }
+            }
+        }
+    }
+    &.menu-open {
+        left: 0;
+    }
+}

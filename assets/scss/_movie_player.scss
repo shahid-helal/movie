@@ -1,0 +1,222 @@
+.movie-player-wrapper {
+    .alert {
+        color: $text-primary;
+        opacity: 0.8;
+        font-weight: 300;
+        font-size: 14px;
+        .close {
+            font-weight: 300;
+            outline: 0;
+        }
+    }
+    .player {
+        position: relative;
+        margin-bottom: -6px;
+        iframe {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            &::before {
+                content: "";
+                color: $text-primary;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 110px;
+                height: 110px;
+                box-shadow: 0 0 40px 5px $primary-color;
+                background: $primary-color 30% 0% no-repeat;
+                display: inline-block;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+            }
+            i {
+                font-size: 42px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: $text-primary;
+                z-index: 2;
+                transform: translate(-45%, -50%);        
+            }
+            .loader {
+                width: 180px;
+                height: 180px;
+                line-height: 180px;
+                box-sizing: border-box;
+                text-align: center;
+                z-index: 1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                &::before, &:after { 
+                    content: "\0020";
+                    opacity: 0; 
+                    box-sizing: border-box; 
+                    position: absolute; 
+                    top: 0; 
+                    left: 0; 
+                    width: 100%; 
+                    height: 100%; 
+                    border-radius: 100px; 
+                    border: 5px solid #fff; 
+                    box-shadow: 0 0 50px #fff, inset 0 0 50px #fff; 
+                }
+                &::before {
+                    z-index: 2;
+                    animation: playloader 2s infinite;
+                }
+                &::after {
+                    z-index: 1;
+                    animation: playloader 2s infinite 1s;
+                }
+            }
+        }
+    }
+    .nav-player {
+        background-color: rgba(255,255,255,0.09);
+        a {
+            color: $text-primary;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            opacity: 0.8;
+            font-size: 14px;
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+
+.server-select {
+    margin: 15px 0;
+    & ul {
+        background-color: rgba(255,255,255,0.09);
+        padding: 15px;
+        & li {
+            background-color: $bg-primary;
+            padding: 10px;
+            font-size: 12px;
+            opacity: 0.8;
+            & span {
+                color: $text-primary;
+                display: inline-block;
+                width: 150px;
+                & i {
+                    margin-right: 5px;
+                }
+            }
+            & a {
+                text-decoration: none;
+                display: inline-block;
+                color: $bg-primary;
+                background-color: $primary-color;
+                padding: 3px 8px;
+                border-radius: 3px;
+                font-weight: 600;
+            }
+        }
+        & li+li {
+            margin-top: 15px;
+        }
+
+    }
+}
+
+.episod-select {
+    margin: 15px 0;
+    .inner {
+        padding: 15px;
+        background-color: rgba(255,255,255,0.09);
+        .title {
+            background-color: $bg-primary;
+            color: $text-primary;
+            padding: 10px;
+            margin-bottom: 10px;
+            opacity: 0.8;
+            h5 {
+                font-size: 14px;
+            }
+        }
+        .episod {
+            a {
+                text-decoration: none;
+                display: inline-block;
+                background-color: $primary-color;
+                color: $bg-primary;
+                font-weight: 600;
+                font-size: 14px;
+                border-radius: 3px;
+                padding: 3px 5px;
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
+.movie-description {
+    .inner-desc {
+        background-color: rgba(255,255,255,0.09);
+        padding: 15px;
+        .movie-desc {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            h3 {
+                color: $text-primary;
+                font-family: $font-lato;
+                font-size: 22px;
+                font-weight: 600;
+            }
+            p {
+                color: $text-primary;
+                font-size: 16px;
+                font-family: $font-lato;
+                font-weight: 300;
+                opacity: 0.8;
+            }
+            ul {
+                margin-top: auto;
+                li {
+                    width: 50%;
+                    color: $text-primary;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    opacity: 0.8;
+                    a {
+                        text-decoration: none;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .buttons {
+            a {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                background-color: $primary-color;
+                padding: 10px 20px;
+                margin-bottom: 15px;
+                color: $bg-primary;
+                font-weight: 600;
+                border-radius: 5px;
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

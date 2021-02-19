@@ -1,0 +1,96 @@
+.footer {
+    .footer-top {
+        padding-bottom: 40px;
+        .footer-widget {
+            p {
+                color: $text-primary;
+                font-size: 14px;
+                opacity: 0.8;
+                margin: 15px 0;
+                font-weight: 300;
+            }
+            .socials {
+                ul {
+                    li {
+                        display: inline-block;
+                        margin: 0 5px 0 0;
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            color: $primary-color;
+                            height: 30px;
+                            width: 30px;
+                            line-height: 30px;
+                            font-size: 13px;
+                            border-radius: 50%;
+                            text-align: center;
+                            border: 1px solid $primary-color;
+                            transition: 0.2s;
+                            &:hover {
+                                background-color: $primary-color;
+                                color: $text-primary;
+                            }
+                        }
+                    }
+                }
+            }
+            h5 {
+                color: $text-primary;
+                font-weight: 500;
+                font-family: $font-lato;
+                font-size: 16px;
+                margin: 15px 0 20px 0;
+                border-bottom: 1px solid $primary-color;
+                padding: 0 0 8px 0;
+            }
+            ul {
+                li {
+                    a.link {
+                        display: inline-block;
+                        text-decoration: none;
+                        color: $text-primary;
+                        font-size: 14px;
+                        font-weight: 300;
+                        padding: 5px 0;
+                        opacity: 0.8;
+                        transition: 0.2s;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        border-top: 1px solid $primary-color;
+        padding: 15px 0;
+        ul {
+            li {
+                display: inline-block;
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    color: $text-primary;
+                    opacity: 0.5;
+                    font-weight: 300;
+                    font-size: 12px;
+                    margin-right: 10px;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        p {
+            font-weight: 300;
+            color: $text-primary;
+            opacity: 0.5;
+            font-size: 12px;
+            a {
+                display: inline-block;
+                color: $text-primary;
+            }
+        }
+    }
+}

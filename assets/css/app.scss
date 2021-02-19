@@ -1,0 +1,129 @@
+@charset 'utf-8';
+
+@import "../scss/variables";
+@import "../scss/reset";
+@import "../scss/anim_keyframes";
+@import "../scss/header";
+@import "../scss/mobile_menu";
+@import "../scss/home_banner";
+@import "../scss/movie_items";
+@import "../scss/subscribe_form";
+@import "../scss/movie_player";
+@import "../scss/movie_library";
+@import "../scss/footer";
+
+
+
+
+
+
+section {
+    padding: 60px 0 0;
+    .section-title {
+        border-bottom: 1px solid $primary-color;
+        padding: 0 0 10px;
+        margin-bottom: 15px;
+        .title {
+            color: $text-primary;
+            display: flex;
+            align-items: center;
+            .buttons {
+                margin-left: 20px;
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    color: $text-primary;
+                    font-size: 14px;
+                    padding: 8px 10px;
+                    min-width: 80px;
+                    text-align: center;
+                    &.active,&:hover {
+                        background-color: rgba(255,255,255,0.09);
+                        border-radius: 3px;
+                    }
+                }
+
+            }
+        }
+        .nav a {
+            text-decoration: none; 
+            color: $bg-primary;
+            border: 1px solid $primary-color;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-weight: 600;
+            font-size: 14px;
+            background: $primary-color;
+        }
+    }
+    
+}
+
+
+.pagination {
+    a.page-link {
+        text-decoration: none;
+        color: $text-primary;
+        font-size: 14px;
+        background: transparent;
+        margin-bottom: 8px;
+        border: 1px solid $primary-color;
+        transition: 0.2s;
+        &:hover {
+            background-color: $primary-color;
+            color: $bg-primary;
+            font-weight: 600;
+            border: 1px solid $primary-color;
+        }
+    }
+    .active {
+        a.page-link {
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+    }
+}
+
+
+.movies-search-box {
+    margin: 60px 0 30px;
+    .section-title {
+        h4 {
+            color: $text-primary;
+            opacity: 0.8;
+            font-family: $font-lato;
+            font-weight: 300;
+        }
+    }
+    .search-form-inner {
+        label {
+            color: $text-primary;
+            opacity: 0.8;
+            font-weight: 300;
+            font-size: 14px;
+        }
+        input,  button[type="submit"] {
+            box-shadow: none;
+            background-color: rgba(255,255,255,0.09);
+            border: 0;
+            height: 44px;
+            color: $text-primary;
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+        button[type="submit"]:hover {
+            background-color: $primary-color;
+            color: $bg-primary;
+        }
+        select {
+            box-shadow: none;
+            background-color: #1a2831;
+            border: 0;
+            height: 44px;
+            color: $text-primary;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+    }
+}

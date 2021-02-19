@@ -1,0 +1,142 @@
+.header {
+    box-shadow: 0 0 15px 3px #000;
+    margin-bottom: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1024;
+    background-color: $bg-primary;
+    .navbar {
+        .navbar-menu {
+            ul {
+                li {
+                    display: inline-block;
+                    position: relative;
+                    a{
+                        text-decoration: none;
+                        color: $text-primary;
+                        padding: 10px;
+                        display: block;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 300;
+                        transition: 0.2s;
+                    }
+                    .mega-menu {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 540px;
+                        border-radius: 5px;
+                        padding: 15px 10px;
+                        z-index: 9;
+                        background-color: $text-primary;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.2s;
+                        a.link {
+                            padding: 5px 8px;
+                            color: $bg-primary;
+                            font-size: 14px;
+                            text-transform: capitalize;
+                            margin-left: -10px;
+                            transition: 0.4s;
+                            &:hover {
+                                margin-left: 0;
+                                background-color: $bg-primary;
+                                color: $text-primary;
+                            }
+                        }
+                    }
+                    &:hover .mega-menu {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        .right-block {
+            form {
+                input {
+                    box-shadow: none;
+                    border-radius: 0;
+                    border: 1px solid $primary-color;
+                    background-color: transparent;
+                    width: 300px;
+                    color: $text-primary;
+                    font-weight: 300;
+                    padding: 0 35px 0 10px;
+                    backface-visibility: hidden;
+                    &::placeholder {
+                        font-size: 14px;
+                    }
+                }
+                button {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background-color: transparent;
+                    border: 0;
+                    margin: 0;
+                    height: 100%;
+                    color: $text-primary;
+                    font-size: 14px;
+                    padding: 0 10px;
+                    opacity: 0.5;
+                    transition: 0.1s;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+            }
+            .nav-hamburger {
+                .hamburger-btn {
+                    width: 25px;
+                    border-color: $text-primary;
+                    cursor: pointer;
+                    height: 25px;
+                    margin-left: 15px;
+                    .line {
+                        width: 100%;
+                        border-top: 3px solid;
+                        border-color: inherit;
+                        margin-top: 6px;
+                        transform-origin: right center;
+                        transition: all 0.33s cubic-bezier(0.33, 0, 0.2, 1);
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        &1 {
+                            transform-origin: right top;
+                        }
+                        &3 {
+                            transform-origin: right bottom;
+                        }
+                    }
+                    &.menu-open {
+                        .line1 {
+                            width: 27px;
+                            transform: rotate(-45deg);
+                        }
+                        .line2 {
+                            opacity: 0;
+                        }
+                        .line3 {
+                            width: 27px;
+                            transform: rotate(45deg);                        
+                        }
+                    }
+                }
+                i {
+                    color: $text-primary;
+                    font-weight: 600;
+                    backface-visibility: hidden;
+                }
+            }
+        }
+    }
+}

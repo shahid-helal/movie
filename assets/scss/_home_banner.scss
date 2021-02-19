@@ -1,0 +1,113 @@
+.movie-banner {
+    overflow: hidden;
+    &-item {
+        padding: 200px 0;
+        position: relative;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+        & > a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }        
+    }
+    &-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        width: 380px;
+        height: 100%;
+        z-index: 3;
+        opacity: 0;
+        transition: 0.4s;
+        background-color: $bg-primary;
+        &::after {
+            top: 0;
+            right: -197px;
+            width: 200px;
+            height: inherit;
+            content: '';
+            position: absolute;
+            transition: 0.3s ease-in;
+            background: linear-gradient(to right, $bg-primary, rgba(0,0,0,0));
+        }
+        h2 {
+            color: $text-primary;
+            font-weight: 600;
+            font-size: 24px;
+        }
+        p {
+            color: $text-primary;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 24px;
+            font-family: $font-lato;
+        }
+        .movie-info-table {
+            background-color: $bg-primary;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            td {
+                border: 0;
+                color: $text-primary;
+                font-family: $font-lato;
+                font-size: 14px;
+                font-weight: 300;
+                padding: 3px 0;
+            }
+        }
+        .watch-movie a {
+            text-decoration: none;
+            background-color: $primary-color;
+            display: inline-block;
+            padding: 13px 15px;
+            color: $bg-primary;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-family: $font-lato;
+            font-weight: 600;
+            border-radius: 3px;
+            outline: 0;
+        }
+    }
+        
+    .slick-list {
+        padding: 0 !important;
+        overflow: visible;
+        margin: 0 -15px;
+        .slick-slide {
+            margin: 0 15px;
+            outline: 0;
+            transition: 0.4s;
+            &:hover .movie-banner-caption {
+                opacity: 1;
+            }
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+            transform: translateY(-50%);
+        .slick-active button {
+            background-color: $primary-color;
+        }
+        button {
+            background-color: transparent;
+            border: 1px solid $primary-color;
+            border-radius: 50%;
+            height: 14px;
+            width: 10px;
+            text-indent: -100px;
+            overflow: hidden;
+            outline: 0;
+        }
+    }
+}
